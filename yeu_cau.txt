@@ -1,0 +1,14 @@
+1.	Đổi địa chỉ giao hàng
+•	Import từ file excel
+•	Thông tin cần đổi: Tỉnh -  quận – phường – tên đường -  số đt nhận hàng
+2.	Order
+•	Chạy 1 lúc tất cả các tài khoản
+•	Thêm hàng vào giỏ (link sản phẩm import từ file excel)
+•	Số lượng sản phẩm
+•	Giá tối đa có thể mua
+VD: để giá tối đa mua là 720.000, sau khi áp voucher giá giảm còn 721.000 => không mua
+•	Add code voucher
+VD: 12h voucher có hiệu lực sử dụng. 11h 59p 30s bắt đầu add voucher, ấn áp dụng, hệ thống báo chưa đến giờ. Tiếp tục lặp lại quá trình, bao giờ add được thì bắt đầu order
+Các team khác đang chạy tool đa luồng (như trong clip mình gửi, nhưng bản upgrade) nên voucher ra tầm 1, 2s là hết. Vì vậy mình cần tool chạy nhanh được chỗ add mã và order.
+3.	 Check tình trạng đơn hàng
+•	Log in lại accout,  lấy mã đơn vận, kiểm tra tình trạng đơn hàng (hủy, đang giao, đã giao)

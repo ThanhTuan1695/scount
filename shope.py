@@ -15,7 +15,7 @@ def encrypt_SHA256(password):
         hashlib.sha256((hashlib.md5(password.encode()).hexdigest()).encode()).hexdigest()
     return sha_signature
 
-def main():        
+def get_cookiees():        
         session = requests.Session()
         response = session.get('https://banhang.shopee.vn/account/signin?next=%2F')
         # cook = response.cookies.get_dict()
@@ -40,6 +40,9 @@ def main():
         url="https://banhang.shopee.vn/api/v2/login/"
         response = session.request("POST",url,headers=headers, data = payload)
         print(response.content)
+        my_cookie = response.cookies
+        print(my_cookie)
+        return my_cookie
 
 
 if __name__ == '__main__':
